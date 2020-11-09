@@ -1,0 +1,57 @@
+[System]
+Name='fuzzydoctorado5'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=15
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='input1'
+Range=[-50 50]
+NumMFs=5
+MF1='emn':'trapmf',[-40 -20 -10 -7.01058201058202]
+MF2='en':'trimf',[-17.3 -5 1]
+MF3='ecero':'trimf',[-2.78 0 3.04232804232804]
+MF4='ep':'trimf',[-1 4 19.97]
+MF5='emp':'trapmf',[5.42 10 20 40]
+
+[Input2]
+Name='input2'
+Range=[0 50]
+NumMFs=3
+MF1='pl':'trimf',[-20 0 10]
+MF2='pn':'trapmf',[5 10 20 30]
+MF3='pp':'trimf',[20 30 70]
+
+[Output1]
+Name='output1'
+Range=[-10 10]
+NumMFs=5
+MF1='smn':'trimf',[-11 -10 -5.95238095238095]
+MF2='sn':'trimf',[-7.8 -5 -2.72486772486773]
+MF3='scero':'trimf',[-1.98 0 2.03703703703703]
+MF4='sp':'trimf',[3.25396825396825 4.95 7.95]
+MF5='smp':'trimf',[6.005291005291 10 15]
+
+[Rules]
+1 1, 5 (1) : 1
+2 1, 4 (1) : 1
+3 1, 3 (1) : 1
+4 1, 2 (1) : 1
+5 1, 2 (1) : 1
+1 2, 5 (1) : 1
+2 2, 4 (1) : 1
+3 2, 3 (1) : 1
+4 2, 2 (1) : 1
+5 2, 1 (1) : 1
+1 3, 5 (1) : 1
+2 3, 4 (1) : 1
+3 3, 3 (1) : 1
+4 3, 1 (1) : 1
+5 3, 1 (1) : 1
